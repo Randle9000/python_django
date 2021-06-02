@@ -9,7 +9,7 @@ def welcome(request):
     return render(request, 'website/welcome.html',
                   {'message': 'template variable this data is from def welcome',
                    'x': 42,
-                   'num_meetings': Meeting.objects.count()}
+                   'meetings': Meeting.objects.all()}
                   )
 
 

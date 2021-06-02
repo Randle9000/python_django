@@ -13,9 +13,16 @@
     <p>
         {{message}}
     </p>
-    <p>
-        there are currently {{num_meetings}} meetings in DB
-    </p>
+    <h2>Meetings</h2>
+    <ul>
+        {% for meeting in meetings %}
+            <li>
+                <a href="/meetings/{{meeting.id}}">
+                    {{meeting.title}}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
 
 </body>
 </html>
