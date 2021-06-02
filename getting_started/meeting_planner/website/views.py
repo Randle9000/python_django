@@ -5,7 +5,8 @@ from django.http import HttpResponse
 
 # Create your views here.
 def welcome(request):
-    return render(request, 'website/welcome.html')
+    return render(request, 'website/welcome.html',
+                  {'message': 'this data is from def welcome'})
 
 
 def date(request):
