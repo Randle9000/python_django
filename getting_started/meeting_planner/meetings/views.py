@@ -18,6 +18,9 @@ MeetingForm = modelform_factory(Meeting, exclude=[]) # MeetingFrom is a class no
 
 def new(request):
     if request.method == "POST":
+        # a = request.POST
+        # print(a)
+        # print(a['title'])
         form = MeetingForm(request.POST)
         if form.is_valid():
             form.save()
